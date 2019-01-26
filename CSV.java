@@ -19,6 +19,7 @@ public class CSV {
         String[][] data_e = {{"",""},{"",""}};
         
         try {
+            //csvファイルの読み込みに関わるインスタンス
             FileInputStream fi = new FileInputStream(filepath);
             InputStreamReader is= new InputStreamReader(fi);
             BufferedReader br = new BufferedReader(is);
@@ -28,7 +29,6 @@ public class CSV {
             String line;
 
             int i = 0;
-
             while ((line = br.readLine()) != null) {
                 dataline = line.split(",");
                 for (int j = 0; j < dataline.length; j++) {
@@ -58,12 +58,12 @@ public class CSV {
     */
     public void exportCSV(String[][] data,String filename) {
         try {
+            //ファイルの書き込みに関わるインスタンス
             FileWriter f = new FileWriter(filename, false);
             PrintWriter p = new PrintWriter(new BufferedWriter(f));
 
             // データの出力
             for (int i = 0; i < data.length; i++) {
-                // レコードの出力
                 for (int j = 0; j < data[i].length; j++) {
                     p.print(data[i][j]);
                     p.print(",");
