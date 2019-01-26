@@ -2,6 +2,10 @@
 
 JavaにおいてプログラムのデータをCSVファイルとして永続化する一例。
 
+・csv.java CSVファイルの読み込み、書き込みのプログラム
+・sample.java メインメソッド
+・sample_input.csv 読み取りに使用するサンプルファイル
+
 参考にしたサイト
 ・JavaでCSVファイルを読み込む方法【初心者向け】 | TechAcademyマガジン
 https://techacademy.jp/magazine/19078
